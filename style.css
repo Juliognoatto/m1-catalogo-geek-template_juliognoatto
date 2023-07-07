@@ -18,57 +18,81 @@ body {
 
 header {
   display: flex;
-  flex-direction: wrap;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 90px;
-  /* background-color: yellowgreen; */
+  margin-bottom: 20px;
 }
 
 .headerImg {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
   width: 207px;
   height: 60px;
 }
 
+.decorationBar{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(234, 233, 233);
+  margin-bottom: 20px;
+}
+
 button{
-  display: flex;
-  justify-content: center;
-  align-items: center ;
   width: 150px;
   height: 40px;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  margin-top: 20px;
   margin-inline: 10px;
   color: #0A99FE;
   background-color: rgba(0, 153, 254, 0.1); 
   border-radius: 5px;
   border-color: white;
   border-style: none;
-}
+} 
 
 button:hover{
   color: white;
   background-color: #0A99FE;
 }
 
-main {
-  background-color: white;
-  width: auto;
+.botoes {
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
   height: auto;
+  width: 100%;
+  /* margin-right: 10%; */
+}
+
+.Paintings{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ActionFigure{
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 section {
-  text-align:center;
-  overflow-x: auto;
   display: flex;
+  overflow-x: auto;
   justify-content: flex-start;
+  /* margin-left: -50px; */
+  text-align: center;
+  /* background-color: violet; */
 }
+
 
 h2 {
   font-size: 20px;
   font-style: normal;
+  margin-left: 40px;
 }
 
 .card img {
@@ -76,9 +100,11 @@ h2 {
   height: 200px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .card name{
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-style: medium;
   color: #1B1B1B;
@@ -88,21 +114,8 @@ h2 {
   font-size: 16px;
   font-style: normal;
   color: #868383;
+  margin-top: 5px;
 }
-
-.Paintings{
-  background-color: white;
-  padding: 40px;
-  margin: 50px;
-}
-
-.ActionFigure{
-  background-color: white;
-  padding: 40px;
-  margin: 50px;
-}
-
-
 
 .card {
   align-items: center;
@@ -110,7 +123,7 @@ h2 {
   height: 275px;
   border-radius: 5px;
   margin-left: 40px;
-  margin-inline: 60px;
-  background-color: yellowgreen;
-
+  margin-inline: 20px;
+  background-color: rgb(186, 184, 184);
+ 
 }

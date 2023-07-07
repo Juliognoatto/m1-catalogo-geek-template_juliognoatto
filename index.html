@@ -4,25 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
   <title>Document</title>
-  
 </head>
 <body>
   <header>
     <img class="headerImg" src="logo.svg" alt="">
-    <button>products</button>
-    <button>contact</button>
+    <div class="botoes">
+      <button class="btnProducts">products</button>
+      <button class="btnContact">contact</button>
+    </div>
   </header>
-  
+
+  <div class="decorationBar"></div>
+
   <main>
-    <section class="Paintings " id="paintings-container">
     <h2>Paintings</h2>
+    <section class="Paintings " id="paintings-container">
+    
     </section>
     <!-- separação -->
+    <h2>Action Figure</h2>
     <section class="ActionFigure" id="action-figures-container">
-      <h2>Action Figure</h2>
+      
     </section>
 
   </main>
@@ -55,9 +59,9 @@ function criarCards() {
     card.appendChild(preco);
 
     // Cria o tipo do produto
-    var tipo = document.createElement('p');
-    tipo.textContent = productsArray[i].type;
-    card.appendChild(tipo);
+    // var tipo = document.createElement('p');
+    // tipo.textContent = productsArray[i].type;
+    // card.appendChild(tipo);
 
     // Verifiqua o tipo do produto e adiciona a section correspondente
     if (productsArray[i].type === "Paintings") {
