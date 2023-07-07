@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+  <title>Document</title>
+  
+</head>
+<body>
+  <header>
+    <img class="headerImg" src="logo.svg" alt="">
+    <button>products</button>
+    <button>contact</button>
+  </header>
+  
+  <main>
+    <section class="Paintings " id="paintings-container">
+    <h2>Paintings</h2>
+    </section>
+    <!-- separação -->
+    <section class="ActionFigure" id="action-figures-container">
+      <h2>Action Figure</h2>
+    </section>
+
+  </main>
+</body>
+<script>
+
+function criarCards() {
+  var paintingsContainer = document.getElementById('paintings-container');
+  var actionFiguresContainer = document.getElementById('action-figures-container');
+
+  // Percorre o array de produtos
+  for (var i = 0; i < productsArray.length; i++) {
+    // Cria um elemento de card
+    var card = document.createElement('div');
+    card.classList.add('card');
+
+    // Cria a imagem do produto
+    var imagem = document.createElement('img');
+    imagem.src = productsArray[i].image;
+    card.appendChild(imagem);
+
+    // Cria o nome do produto
+    var nome = document.createElement('h3');
+    nome.textContent = productsArray[i].name;
+    card.appendChild(nome);
+
+    // Cria o preço do produto
+    var preco = document.createElement('p');
+    preco.textContent = productsArray[i].price;
+    card.appendChild(preco);
+
+    // Cria o tipo do produto
+    var tipo = document.createElement('p');
+    tipo.textContent = productsArray[i].type;
+    card.appendChild(tipo);
+
+    // Verifiqua o tipo do produto e adiciona a section correspondente
+    if (productsArray[i].type === "Paintings") {
+      paintingsContainer.appendChild(card);
+    } else if (productsArray[i].type === "Action Figures") {
+      actionFiguresContainer.appendChild(card);
+    }
+  }
+}
+
+// Chama a função para criar os cards
+criarCards();
+
+
+
+</script>
+</html>
